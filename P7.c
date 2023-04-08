@@ -1,25 +1,8 @@
-//wap to move all the negative elements to one side of the array
-#include<iostream>
-using namespace std;
-void shiftIntegers(int arr[],int n)
-{
-    int j=0;
-    for(int i =0;i<n;i++)
-    {
-        if(arr[i]<0)
-        {
-            if(i!=j)
-            swap(arr[i],arr[j]);
-            j++;
-        }
-    }
-    for(int i=0;i<n;i++)
-    printf("%d",arr[i]);
-}
-int main()
-{
-    int arr[]={2,4,-10,13,-7,-60,52,8,-19};
-    int n=sizeof(arr)/sizeof(arr[0]);
-    shiftIntegers(arr,n);
-    return 0;
-}
+// what is the size of character in c
+
+the size of both signed and unsigned char is 1 byte .
+the defined range is-128 to 127.
+
+// how the size of C character is calculated
+
+using the size of()operator

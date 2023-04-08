@@ -1,22 +1,17 @@
-//wap to copy the elementsof one array into another array
+// a).
+k is a pointer to a pointer to a pointer to a pointer to a char
+
+// b).
 #include<stdio.h>
 int main()
 {
-    int a[5]= {3,4,5,6,7},n=5,b[n],i;
-    for(i=0;i<n;i++)
-    {
-        b[i]=a[i];
-    }
-    printf("The first array is:");
-    for(i=0;i<n;i++)
-    {
-        printf("%d" , a[i]);
-    }
-    printf("The second array is:");
-    for(i=0;i<n;i++)
-    {
-        printf("%d" , b[i]);
-    }
-    return 0;
-}       
-        
+int k = 5;
+int *p = &k;
+int **m = &p;
+**m = 6;
+printf("%d\n", k);
+return 0;
+}
+
+
+// ans. 6

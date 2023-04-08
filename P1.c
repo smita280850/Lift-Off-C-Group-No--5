@@ -1,25 +1,24 @@
-// wap to count the no of occurence of a number in an array using function
-#include<stdio.h>
-int main()
+#include <stdio.h>
+int main() 
 {
-    int size,i,num,occr=0;
-    printf("Enter the array size: ");
-    scanf("%d" , &size);
+   char line[150];
+   
+   printf("Enter a string: ");
+   fgets(line, sizeof(line), stdin); 
 
-    int arr[size];
-    printf("Enter the %d elements of array: ", size);
-    for (i=0; i<size; i++)
-    {
-        scanf("%d" , &arr[i]);
-    }
-    printf("Enter the array item you want to know =");
-    scanf("%d" , &num);
-    for(i=0 ; i<size ; i++)
-    {
-        if (arr[i]== num)
-        {
-            occr++;
-        }
-    }
-    printf("%d occured %d times\n" , num, occr);
+
+   for (int i = 0, j; line[i] != '\0'; ++i) 
+   {
+      while (!(line[i] >= 'a' && line[i] <= 'z') && !(line[i] >= 'A' && line[i] <= 'Z') && !(line[i] == '\0'))
+       {
+         for (j = i; line[j] != '\0'; ++j) 
+         {
+            line[j] = line[j + 1];
+         }
+         line[j] = '\0';
+      }
+   }
+   printf("Output String: ");
+   puts(line);
+   return 0;
 }
